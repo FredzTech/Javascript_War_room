@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>USING THE FLEXBOX</title>
+</head>
+<body>
+<style>
+    .parent-container{
+        display:flex;
+        text-align:center;
+        border:1px solid black;
+        flex-wrap:wrap;
+    }
+
+    .title{
+        text-align:center;
+        border:1px solid black;
+    }
+    .child-1,.child-2{
+        border:1px solid black;
+        margin:10px;
+        /* text-align:start; */
+
+    }
+</style>
+    <div class="parent-container">
+<div><h1 class="title">PARENT</h1></div>
+
+        <div class="child-1">
+            <h1>Paragraph 1</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi minus perspiciatis numquam similique quaerat ipsum doloribus autem non natus rem esse accusamus quo delectus perferendis dolores, fugit, et corrupti?</p>
+        </div>
+        <div class="child-2">
+            <h1>Paragraph 1</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi minus perspiciatis numquam similique quaerat ipsum doloribus autem non natus rem esse accusamus quo delectus perferendis dolores, fugit, et corrupti?</p>
+        </div>
+    </div>
+
+<button class="btn btn-outline-success" onclick="message()">Hit </button>
+
+<div class="text"></div>
+
+
+
+
+
+<script>
+    function message(){
+     var dive=document.getElementsByClassName("text");
+     var content="This is an alert button that is linked with a function ....Seems you are getting the grip..good job so far mehn";
+     console.log(content);
+     var words=document.createTextNode(content);
+     console.log(words);
+     dive.appendChild(words);
+    }
+
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

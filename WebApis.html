@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>API</title>
+</head>
+<body>
+
+    <p id="text"></p>
+
+<button onclick="getLocation()" class="btn btn-outline-success">Location</button>
+
+<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+let txt="This is where you can get location about your web browser location by a simple click of a button";
+let txt_1=document.createTextNode(txt);
+let ref=document.getElementById('text');
+console.log(ref.innerHTML=txt);
+ref.style.textAlign='center' ;textDecoration='underline';
+
+</script>
+<!-- THIRD PARTY APIS -->
+<!-- These are APIS that are not inbuilt into the Browser....
+     To use them,you will have to download the code from the web.
+
+Examples:
+
+YouTube API - Allows you to display videos on a web site.
+Twitter API - Allows you to display Tweets on a web site.
+Facebook API - Allows you to display Facebook info on a web site.
+ -->
+
+ <!-- WEB STORAGE API -->
+ <!-- it is a simple syntax for storing and retrieving data in the 
+browser.It is usually very easy to use:-
+            EXAMPLE
+localStorage.setItem("name", "John Doe");
+localStorage.getItem("name");
+
+BREAKDOWN FOR THE EXAMPLE
+Local storage is an object that allows access to a local storage for a 
+particular Website ...Meaning that it give you access to manipulate data in that domain
+Therefore,It allows you to store, read, add, modify, and delete data items for that domain.
+The data is stored with no expiration date, and will not be deleted when the browser is closed.
+
+The setItem() Method is used to store a data item in a storage.
+It takes a name(property) and a value as parameters as shown.
+The getItem() Method retrieves a data item from the storage...It takes the property as the parameter..
+which in this case is name...
+
+The sessionStorage Object....Is almost similar to the localStorage Object..The differences is that the SessionStorage Object stores 
+data only for one session.
+The getItem() and setItem() are also used here
+
+Storage Object Properties and Methods
+=====================================
+Property             Method	Description
+key(n)	            -Returns the name of the nth key in the storage
+length	            -Returns the number of data items stored in the Storage object
+getItem(keyname)	-Returns the value of the specified key name
+setItem(keyname, value)	-Adds that key to the storage, or update that key's value if it already exists
+removeItem(keyname)	-Removes that key from the storage
+clear()             -Empty all key out of the storage
+
+
+Related Pages for Web Storage API
+=================================
+Property             	Description
+window.localStorage     -Allows to save key/value pairs in a web browser. Stores the data with no expiration date
+window.sessionStorage	-Allows to save key/value pairs in a web browser. Stores the data for one session
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>

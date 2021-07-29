@@ -1,0 +1,136 @@
+THE DIFFERENCE BETWEEN VAR LET AND CONST.
+==========================================
+*VAR has a global scope unless when defined in a function.Even in blocks e.g loops it still remains  to 
+have a global scope.
+
+*LET is the block version of var i.e it is limited to the block where it is defined.
+
+*CONST on the other hand is also limited to the block where it is used but the only difference is that once it 
+has been created,its value can never change.
+
+
+REACT RENDER HTML.
+===================
+
+*One of the main goals of react is to render HTML in a webpage.This objective is accommplished by using a function 
+called ReactDOM.render()...which takes in two argument inside the brackets separated by commas.
+        1.HTML code 
+        2.AN HTML ELEMENT(Mostly the root node).
+
+
+Root Node. 
+==========
+This is simply the container that holds the html code i.e where the HTML CODE is assigned..
+In other words,the root node is the HTML element where you  want to display the result.It is like a container for the content managed by React
+The root node does not have to be a <div> element and it definately doesn't have to contain the id of root.It can be whatever you like e.g header,p e.t.c
+To get to this root node it must have an ID /CLASS or anything that can help you reference it and append data into it.
+
+Example.
+========
+In the index.html file we can have ......
+
+<body>
+
+  <header id="sandy"></header>
+
+</body>
+
+
+And in the react index.js file we can have:-
+
+ReactDOM.render(<p>Hallo</p>, document.getElementById('sandy'));
+
+
+This will simply put the html code into the referenced header container.(The Root Node)
+
+
+REACT COMPONENTS
+==============================================
+REACT IS ALL ABOUT REUSING CODE.
+==============================================
+Components are like functions that return HTML elements.
+They are indepedent and reusable bits of code.
+They serve the same purpose as Javascript functions but work in isolation
+and return HTML via a render() function.
+They come in two types:-
+  Class component
+  Function component
+It is like the class component is mostly used because it has more functionality
+Kindly note that the slight difference between the class that we saw earlier where the constructor() {}method was used where the object properties are assigned inside the curly braces and a highlight of this properties given inside the curved brackets but the rule
+of the name of this class starting with a capital letter still stands.
+Creating  a class component.
+=============================
+Some rules to follow:-
+The component's name must start with Upper
+JSX stands for JavaScript XML.
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+
+This creates a component called car in you react application which returns a HTML element.To use this component in your application,use similar syntax as normal:</Car>
+i.e ReactDOM.render(<Car />, document.getElementById('root'));
+
+Note how the closing tag has been put...
+REACT JSX
+=========
+Just like the way jQuery makes it easier to write Javascript lines of code into the DOM,JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.Itconverts HTML tags into react elements.
+I.E It allows us to write HTML in react ...
+
+JSX stands for JavaScript XML.
+
+Some basic syntax for JSX
+=====================================================
+
+*Expressions should be wittend inside curly braces.
+*Large blocks of HTML i.e Multiple lines must be written inside curly braces.
+*ONE TOP LEVEL ELEMENT:-The HTML code must be wrapped in ONE top level element.
+So if you like to write two headers, you must put them inside a parent element, like a div element
+*HTML elements must be properly closed
+
+
+REACT COMPONENTS ADDITIONAL NOTES
+====================================
+
+When the constructor fuction is used to initiate the component's properties which are stored in a box(object) called state.
+
+It is in the constructor function where you also honor the inheritance of the parent component by including the super()statement which gives you
+access to all the functions of  the parent component (React.Component) and also executes the parent component's constructor function(properties).
+
+  Props 
+  ======
+  This is another way of handling the constructor properties .
+
+  Props are like function arguments ,which are sent into the component as attributes.
+
+Components in Components
+=========================
+You can also use a component inside another component by simply converting it into a html element by the inclusion
+of the <object name/> tag.
+
+Components in Files.
+=======================
+This is simply where you put some bit of your components in other .js files and carry out the export biz at the end of this new .js file e.g
+export default House(Name of the component created that you want to later import in the root.js file) ;
+and the import biz at the beginning of the root .js file after the two compulsory statements i.e
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+REACT PROPS 
+============
+They are like arguments passed into functions in Javascript or attributes in HTML.
+To send props into a component same syntax as that of html attributes is used i.e{attribute_name="attribute"}
+e.g
+Task:Add a "brand" attribute to the Car element:
+
+1.const myelement = <Car brand="Ford" />;
+
+Task:Use the brand attribute in the component;
+2.class Car extends React.Component {
+  render() {
+    return <h2>I am a {this.props.brand}!</h2>;
+  }
+}
+
+

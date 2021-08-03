@@ -44,7 +44,7 @@ console.log(Kenya);
 
 let newKenya=Kenya.map((name)=> { return name.County.toUpperCase() +' '+'COUNTY which has a population of '+ name.Population+' '+'people'.toUpperCase()});
 
-console.log(typeof(newKenya));
+// console.log(typeof(newKenya));
 
 let another_one=Kenya.map((counties)=>counties.Number+" "+counties.County);
 

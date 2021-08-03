@@ -18,7 +18,7 @@ console.log(names,age,county);
 //==================================
 // Instead of doing the above shit we can destructure this data making it even sweeter and much easier to work with
 //When it comes to destructuring we can do it in any order azn you must not fuatanisha the properties as they appear 
-var {names, age,countyOfResidence}=profiling;
+var {names,countyOfResidence,age}=profiling;//Doing it in any order
 console.log(names,age,countyOfResidence);
 
 

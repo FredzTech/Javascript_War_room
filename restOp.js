@@ -2,10 +2,13 @@
 let bread={
     brand:"Kingsmill",
     quantity:"400_grams",
-    Expiry_Date:"12-01-2021"
+    Expiry_Date:"12-01-2021",
+    Manufacturing_Date:"06-01-2021"
 };
 
-// let {brand,Expiry_Date,quantity}=bread;
+let {brand,Expiry_Date,quantity}=bread;
+
+console.log(quantity);
 
 // console.log(brand,quantity,Expiry_Date);
 //List of Additional Properties
@@ -14,9 +17,9 @@ bread.manufaturer="KingsMillers_LTD."
 
 // console.log(bread);
 
-let {brand,...rest}=bread;
+// let {brand,...rest}=bread;
 
-console.log(brand,rest);
+// console.log(brand,rest);
 
 // Its important to note that when we use the rest operator the items are put into a container but still remain an object
 

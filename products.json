@@ -1,9 +1,5 @@
-//SAMPLE OF AN ITEMS ARRAY OF ITEMS.
-//=====================================
-
-// You are free to play around with this data.
-
-let Items = [
+{
+  "items": [
     {
       "sys": { "id": "1" },
       "fields": {
@@ -68,24 +64,7 @@ let Items = [
         "image": { "fields": { "file": { "url": "./images/product-8.jpeg" } } }
       }
     }
-  ];
-
-// console.log(Items);
-
-
-// DESTRUCTURING
-
-//   let simpProducts = Items.map((products)=>{
-
-//     const {id} = products.sys;
-// ````const {title,price,image}=products.fields;
-
-//    return (id,title,price);
-//   });
-
-//   console.log(simpProducts);
-
-
-
+  ]
+}
 
 

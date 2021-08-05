@@ -17,9 +17,10 @@ let myCar1 = new Car("Ford", 2014);
 
 // GETTERS AND SETTERS
 //======================
-/**Inasaidia sana kwanza kwa methods ..When you want to refer to them You refer to them without using the parenthesis maze
- * It makes you code simpler,cleaner and much easier to write
- * FOR EXAMPLE.
+/* Inasaidia sana kwanza kwa methods.
+ * You refer to them without the parenthesis maze.
+ * It makes you code simpler,cleaner and much easier to write.
+ * FOR  EXAMPLE.
  * ============
   class Car {
   constructor(brand) {
@@ -29,14 +30,38 @@ let myCar1 = new Car("Ford", 2014);
     return this.carname;
   }
   set cnam(x) {
-    this.carname = x;
+
   }
+
 }
+ console.log()
 
-let myCar = new Car("Ford");
+*/    
 
-document.getElementById("demo").innerHTML = myCar.cnam;
+class Books {
+  constructor(subject,author,pages,price){
+    this.subjectName =subject;
+    this.bookAuthor = author;
+    this.totalPages = pages;
+    this.bookPrice =price;
+  }
+
+  get sName(){
+    return this.subjectName;
+  }
+};
+
+let Book_1 = new Books("English","J.M",165,750);
+
+let Book_2 = new Books("Kiswahili","James Kibiru","165","Ksh.750");
+ //WITH GET AND SET
+ console.log(Book_1.sName);
+ console.log(Book_2.sName);
 
 
- * 
- */
+//  WITHOUT GET AND SET
+
+ console.log(Book_1.sName());
+ console.log(Book_2.sName());
+
+

@@ -5,8 +5,8 @@ var profiling={
 }; 
 
 const{ names:SML, countyOfResidence:mCounty}=profiling;
-console.log(SML,mCounty);
-console.log(SML,mCounty);
+// console.log(SML,mCounty);
+// console.log(SML,mCounty);
 
 // Just messing around with the type of kerea that i found
 
@@ -14,6 +14,7 @@ console.log(SML,mCounty);
 
 
 //DESTRUCTURING ARRAYS
+//========================
 
 const furniture=['table','television','fridge','dispenser','Microwave'];
 
@@ -28,3 +29,24 @@ console.log(rest);
 
 
 
+// ADDING NO'S INSIDE AN ARRAY.
+//=================================
+/*
+let numbers = [0,10,20,30,40,50];
+let answer = 0;
+let response = numbers.forEach((number)=>{
+     answer += number;
+     console.log( answer );
+ });
+
+ */
+
+// KUKAGUA MALI.
+//===============
+// let [a,b,c,d,e,f] = numbers;
+
+/* console.log (a,b,c,d,e,f);//Displaying the variables themselves.
+
+  console.log({a,b,c,d,e,f});//Grouping the variables into a new object with key:value pairs 
+
+ console.log([a,b,c,d,e,f]);//Grouping the variable back to an array. */

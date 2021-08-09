@@ -5,80 +5,51 @@
 
 let Items = [
     {
-      "sys": { "id": "1" },
-      "fields": {
-        "title": "queen panel bed",
-        "price": 10.99,
-        "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
-      }
+        id: "1",
+        title: "queen panel bed",
+        price: 10.99,
+        quantity:"1",
+    
     },
-    {
-      "sys": { "id": "2" },
-      "fields": {
-        "title": "king panel bed",
-        "price": 12.99,
-        "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
-      }
+     {
+        id: "2",
+        title: "queen panel bed",
+        price: 10.99,
+        quantity:"1",
+    
     },
-    {
-      "sys": { "id": "3" },
-      "fields": {
-        "title": "single panel bed",
-        "price": 12.99,
-        "image": { "fields": { "file": { "url": "./images/product-3.jpeg" } } }
-      }
+     {
+        id: "3",
+        title: "table",
+        price: 10.99,
+        quantity:"1",
+    
     },
-    {
-      "sys": { "id": "4" },
-      "fields": {
-        "title": "twin panel bed",
-        "price": 22.99,
-        "image": { "fields": { "file": { "url": "./images/product-4.jpeg" } } }
-      }
+     {
+        id: "4",
+        title: "queen panel bed",
+        price: 10.99,
+        quantity:"1",
+    
     },
-    {
-      "sys": { "id": "5" },
-      "fields": {
-        "title": "fridge",
-        "price": 88.99,
-        "image": { "fields": { "file": { "url": "./images/product-5.jpeg" } } }
-      }
+     {
+        id: "5",
+        title: "queen panel bed",
+        price: 10.99,
+        quantity:"1",
+    
     },
-    {
-      "sys": { "id": "6" },
-      "fields": {
-        "title": "dresser",
-        "price": 32.99,
-        "image": { "fields": { "file": { "url": "./images/product-6.jpeg" } } }
-      }
-    },
-    {
-      "sys": { "id": "7" },
-      "fields": {
-        "title": "couch",
-        "price": 45.99,
-        "image": { "fields": { "file": { "url": "./images/product-7.jpeg" } } }
-      }
-    },
-    {
-      "sys": { "id": "8" },
-      "fields": {
-        "title": "table",
-        "price": 33.99,
-        "image": { "fields": { "file": { "url": "./images/product-8.jpeg" } } }
-      }
+     {
+      id: "5",
+        title: "queen panel bed",
+        price: 10.99,
+        quantity:"1",
     }
-  ];
-
+  ]
 // console.log(Items);
 
 
-// DESTRUCTURING
-
-//   let simpProducts = Items.map((products)=>{
-
-//     const {id} = products.sys;
-// ````const {title,price,image}=products.fields;
+// DESTRUCTURING node Combination.jsmage}=products.fields;
 
 //    return (id,title,price);
 //   });
@@ -86,6 +57,24 @@ let Items = [
 //   console.log(simpProducts);
 
 
+//FIND METHODS
+ let id = 5;
+ let item=()=>{
+  let em = Items.find((product) =>{
+ if(product.title === "table"){
+   return  product.id ;
+ }else {
+   return "error"
+ }}
+ )
+ return em;
+ };
+
+console.log(item());
+
+//  console.log(item);
+//  console.log(Items);
+        
 
 
 

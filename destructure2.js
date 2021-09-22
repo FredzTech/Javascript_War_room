@@ -1,12 +1,50 @@
 var profiling={
     names:"Gichia Alfred Githinji",
     age:"18 Years",
-    countyOfResidence:"Kiambu County"
+    countyOfResidence:"Kiambu County",
+    friends:[
+        {
+            Name : "Dedan Mugambi",
+            Age  :"18 years",
+            CountyOfResidence : "Kiambu County"
+            
+        },
+          {
+            Name : "Ndiki",
+            Age  :"18 years",
+            CountyOfResidence : "Kiambu County"
+            
+        },
+          {
+            Name : "Reinhard Njuguna",
+            Age  :"19 years",
+            CountyOfResidence : "Kiambu County"
+            
+        }
+    ]
 }; 
+const { names , countyOfResidence , age } = profiling;
 
+const friendz = profiling.friends;
+console.log(friendz);
+
+const namesOfFriends = friendz.map((friend)=>{
+  const {Name , Age} = friend;
+  return {Name , Age};
+});
+
+console.log(namesOfFriends);
+
+console.log(names);
+console.log(age);
+console.log(countyOfResidence);
+
+//BAPTISING YOUR FLOCK
 const{ names:SML, countyOfResidence:mCounty}=profiling;
-// console.log(SML,mCounty);
-// console.log(SML,mCounty);
+ console.log(SML,mCounty);
+ console.log(age);
+console.log(SML,mCounty);
+
 
 // Just messing around with the type of kerea that i found
 
@@ -20,10 +58,10 @@ const furniture=['table','television','fridge','dispenser','Microwave'];
 
 
 const [reading_Item,watching_Item]=furniture;
-const [read_Item,watch_Item,...rest]=furniture;
+const [read_Item,watch_Item,...all]=furniture;
 console.log(reading_Item);//or the read Item
 console.log(watching_Item);//or the watch Item
-console.log(rest);
+console.log(all);
 
 //As for the arrays destrucuturing them is quite easy as baptising them with new names you just have to write them while destructuring
 

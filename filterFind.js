@@ -54,7 +54,10 @@ const county_1=kenya.filter((cnty)=>{
 
 })
 
- console.log(county_1);
+//  console.log(county_1);
+
+
+
 
 /*SUMMARY
 

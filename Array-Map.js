@@ -36,23 +36,24 @@ const Kenya=[
     
 ];
 
-console.log(Kenya);
+// KO
 //Returns the whole Array which contains Objects.....And each object is like a member of the Array.
 //The map method scrutinizes each member to find the property that you are looking for and returns them as a new Array.
 
 // USING THE MAP ARRAY METHOD TO MANIPULATE THE OBJECT ABOVE WHICH CONTAINS A LIST OF COUNTIES SASA IN THIS //
 
-let newKenya=Kenya.map((name)=> { return name.County.toUpperCase() +' '+'COUNTY which has a population of '+ name.Population+' '+'people'.toUpperCase()});
+let newKenya=Kenya.forEach((name)=> { return name.County.toUpperCase() +' '+'COUNTY which has a population of '+ name.Population+' '+'people'.toUpperCase()});
 
 // console.log(typeof(newKenya));
+console.log(newKenya);
 
 let another_one=Kenya.map((counties)=>counties.Number+" "+counties.County);
 
-console.log(another_one);
+// console.log(another_one);
 
 let county_1=Kenya.map((c_name)=>{
     return c_name.Number;
 
 })
 
-console.log(county_1);
+// console.log(county_1);

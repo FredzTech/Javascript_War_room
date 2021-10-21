@@ -1,3 +1,6 @@
+let div = document.querySelector('#magic');
+console.log(div);
+
 // MAP METHOD
 //==================
 // It is like looking over the whole array to find what you want using the callback function&a new reference name(Which in this case is the word "name").
@@ -6,7 +9,7 @@
 //one bana (which in this case we have created new array called newKenya). 
 
 
-const Kenya=[
+const Kenya =[
     {
         Number: 01,
         County:"Mombasa",
@@ -41,12 +44,15 @@ const Kenya=[
 //The map method scrutinizes each member to find the property that you are looking for and returns them as a new Array.
 
 // USING THE MAP ARRAY METHOD TO MANIPULATE THE OBJECT ABOVE WHICH CONTAINS A LIST OF COUNTIES SASA IN THIS //
+let newKenya = Kenya.map((county)=> {
+    let countyString = county.County.toUpperCase() +' '+'COUNTY which has a population of '+ county.Population+' '+'people'.toUpperCase();
+     let par = document.createElement('p');
+         par.innerHTML= countyString;
+     div.appendChild(par);
+    
+});
 
-let newKenya=Kenya.forEach((name)=> { return name.County.toUpperCase() +' '+'COUNTY which has a population of '+ name.Population+' '+'people'.toUpperCase()});
-
-// console.log(typeof(newKenya));
-console.log(newKenya);
-
+ 
 let another_one=Kenya.map((counties)=>counties.Number+" "+counties.County);
 
 // console.log(another_one);
@@ -56,4 +62,4 @@ let county_1=Kenya.map((c_name)=>{
 
 })
 
-// console.log(county_1);
+console.log(county_1);

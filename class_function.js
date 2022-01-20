@@ -40,11 +40,16 @@ class gift {
     }
 
     present(){
-        return 'I have a'+'  '+this.name+'  '+'gift for easter which is a type of '+this.brand;
+        return 'I have a'+'  '+this.name+'  '+'gift for easter which is a '+this.brand;
     }
 };
 
-personalCar=new gift('V8','Refurbished_Car');
+personalCar=new gift('Nissan Audi','Refurbished_Car');
+
+console.log(personalCar);//The constructor method for defining object properties is automatically called.
+
+
+// Other functions in a class must be called manually
 
 console.log(personalCar.present());
 
@@ -54,7 +59,7 @@ console.log(personalCar.present());
 
 /* This is simply inheriting properties and methods from another class where the "extends" keyword is used*/
 
-//We are goin to create a new class called Model which will inherite the properties and methods of the car class defined earlier.
+//We are goin to create a new class called Model which will inherit the properties and methods of the car class defined earlier.
 
 class Model extends car {
     constructor(name,mod){
@@ -62,7 +67,7 @@ class Model extends car {
         this.model=mod;
     }
     show(){
-        return this.present()+',it is an ' + this.model
+        return this.present()+',it is of the model ' + this.model
     }
 }
 

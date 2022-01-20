@@ -10,7 +10,7 @@
 const fetchComments = async() =>{
       let data = await fetch(`https://jsonplaceholder.typicode.com/posts/`);
       let comments = await data.json();
-      return comments; 
+      console.log(comments); 
       
   };
 
@@ -80,8 +80,8 @@ const promptBox = ()=>{
 //FUNCTION TO DISPLAY THE COMMENT ON THE SCREEN
 //==================================================
 
- document.addEventListener("DOMContentLoaded", ()=>{
+//  document.addEventListener("DOMContentLoaded", ()=>{
 
-    promptBox();
+//     promptBox();
 
- });
+//  });

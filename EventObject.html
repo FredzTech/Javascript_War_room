@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The event object</title>
+</head>
+
+<body>
+    <p class="paragraph_1" class="paragraph1" onclick=onClick(event) onchange="onChange(event)">Lorem ipsdolor sit amet,
+        consectetur adipisicing elit. Facere, consequatur eveniet id doloremque velit odio. Sequi quae error repudiandae
+        esse sint eius a nobis optio, sunt voluptas. Iste, illo dolorem.</p>
+
+    <p class="eventData"></p>
+    <p class="targetObject"></p>
+
+
+    <h4>Kindly Type in your name</h4>
+    <input type="text" id="name" name="inputStuff" onchange=onChange(event) onfocus=onFocus(event)
+        onBlur=micTest(event)>
+
+
+    <h1>Your Name is</h1>
+    <p class="name"></p>
+
+    <p class="onBlurTest">Tunatest tu Mitambo Kidogo</p>
+    <script>
+        //METHOD 1 : ONCLICK METHOD IS THE MOST BASIC METHOD USED TO FIRE OFF A CERTAIN FUNCTION UPON THE CLICK OF A CERTAIN ELEMENT.
+        //============================================================================================================================
+        let onClick = (e) => {
+            let eventData = e;
+            console.log(eventData);
+            //DESTRUCTURING THE DATA.
+            let {
+                target
+            } = eventData;
+            console.log(e.type);
+
+        }
+
+        //METHOD 2: ONCHANGE METHOD FIRES OFF USUALLY WHEN THERE IS A CHANGE IN VALUE IN A CERTAIN ELEMENT.
+        //===================================================================================================
+        let onChange = (e) => {
+
+
+            let eventObject = e;
+
+
+            document.querySelector(".name").innerHTML = e.target.value
+            console.log(e.type);
+            console.log(e.target.value);
+
+        }
+        //METHOD 3: ONBLUR METHOD FIRES OF WHEN THE CURSOR MOVES AWAY FROM A CERTAIN ELEMENT
+        //====================================================================================
+        let micTest = (e) => {
+            console.log(e);
+            let {
+                name
+            } = e.target;
+            console.log(name);
+            console.log(`The cursor has moved away from the` + " " + name + " " + `element. (onblur event)`)
+        }
+        //METHOD 4 : THE ONFOCUS METHOD IS FIRED OFF UPON THE FOCUS ONTO A CERTAIN ELEMENT 
+        //=================================================================================
+        let onFocus = (e) => {
+            let {
+                name
+            } = e.target;
+            console.log('I am now focused on the' + ' ' + name + ' ' + 'element(onfocus event)')
+        }
+    </script>
+</body>
+
+</html>

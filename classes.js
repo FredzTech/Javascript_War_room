@@ -14,7 +14,6 @@ let myCar1 = new Car("Ford", 2014);
 * You can also add any number of methods after the constructor method.
  */
 
-
 // GETTERS AND SETTERS
 //======================
 /* Inasaidia sana kwanza kwa methods.
@@ -36,32 +35,29 @@ let myCar1 = new Car("Ford", 2014);
 }
  console.log()
 
-*/    
+*/
 
 class Books {
-  constructor(subject,author,pages,price){
-    this.subjectName =subject;
+  constructor(subject, author, pages, price) {
+    this.subjectName = subject;
     this.bookAuthor = author;
     this.totalPages = pages;
-    this.bookPrice =price;
+    this.bookPrice = price;
   }
 
-  get sName(){
+  get sName() {
     return this.subjectName;
   }
-};
+}
 
-let Book_1 = new Books("English","J.M",165,750);
+let Book_1 = new Books("English", "J.M", 165, 750);
 
-let Book_2 = new Books("Kiswahili","James Kibiru","165","Ksh.750");
- //WITH GET AND SET
- console.log(Book_1.sName);
- console.log(Book_2.sName);
-
+let Book_2 = new Books("Kiswahili", "James Kibiru", "165", "Ksh.750");
+//WITH GET AND SET
+console.log(Book_1.sName);
+console.log(Book_2.sName);
 
 //  WITHOUT GET AND SET
 
- console.log(Book_1.sName());
- console.log(Book_2.sName());
-
-
+console.log(Book_1.sName());
+console.log(Book_2.sName());

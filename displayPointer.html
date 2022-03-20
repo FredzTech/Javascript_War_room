@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POINTER</title>
+    <style>
+        *{
+            color:white;
+        }
+        body{
+            /* ff 3.6+ */
+    background:-moz-linear-gradient(90deg, rgba(12, 3, 70, 1) 0%, rgba(16, 0, 120, 1) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(90deg, rgba(12, 3, 70, 1) 0%, rgba(16, 0, 120, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(90deg, rgba(12, 3, 70, 1) 0%, rgba(16, 0, 120, 1) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#100078', endColorstr='#0C0346', GradientType=0 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(90deg, rgba(12, 3, 70, 1) 0%, rgba(16, 0, 120, 1) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(90deg, rgba(12, 3, 70, 1) 0%, rgba(16, 0, 120, 1) 100%);
+        }
+        button{
+            cursor: pointer;
+            padding:7px 7px;
+            border:none;
+            background-color:rgba(0, 255, 21, 0.507);
+            color:white;
+            font-size:20px;
+            border-radius:5px;
+            max-width: 120px;
+            max-height:50px;
+            margin:0 25px;
+
+        }
+        .heading{
+            text-decoration:underline;
+        }
+        .container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+        .paragraph{
+            font-size:20px;
+        }
+        .navigation{
+        display:flex;
+        align-items:center;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="navigation">
+            <div>
+        <h1 class="heading">THE CURSOR ATTRIBUTE CSS.</h1>
+            </div>
+            <div>
+        <button> POINTER </button>
+            </div>
+        </div>
+    
+
+    <p class="paragraph">Hover over the button above see the pointer cursor type. The button seems clickable.</p>
+
+    </div>
+</body>
+</html>

@@ -20,29 +20,23 @@ var profiling = {
     },
   ],
 };
-const { names, countyOfResidence, age } = profiling;
+const { names, countyOfResidence, age, friends } = profiling;
 
-const friendz = profiling.friends;
-console.log(friendz);
+console.log(names + " " + countyOfResidence + " " + age);
 
-const namesOfFriends = friendz.map((friend) => {
+const namesOfFriends = friends.map((friend) => {
   const { Name, Age } = friend;
   return {
-    Name,
-    Age,
+    name: Name,
+    age: Age,
   };
 });
 
 console.log(namesOfFriends);
 
-console.log(names);
-console.log(age);
-console.log(countyOfResidence);
-
 //BAPTISING YOUR FLOCK
+//======================
 const { names: SML, countyOfResidence: mCounty } = profiling;
-console.log(SML, mCounty);
-console.log(age);
 console.log(SML, mCounty);
 
 // Just messing around with the type of kerea that i found
